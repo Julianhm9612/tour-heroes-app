@@ -7,14 +7,18 @@ import { HEROES } from '../../mock-heroes';
 // Classes
 import { Hero } from 'src/app/hero';
 
+// Services
+import { MessageService } from '../message/message.service';
+
 @Injectable({
   providedIn: 'root'
 })
 export class HeroService {
 
-  constructor() { }
+  constructor(private messageService: MessageService) { }
 
   public getHeroes(): Observable<Hero[]> {
+    this.messageService.add('HeroService: Fetched heroes');
     return of(HEROES);
   }
 }

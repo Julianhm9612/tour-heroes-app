@@ -19,7 +19,8 @@ nav a {
   border-radius: 4px;
 }
 
-nav a:visited, a:link {
+nav a:visited,
+a:link {
   color: #334953;
 }
 
